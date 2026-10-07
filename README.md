@@ -86,7 +86,8 @@ No guesses, no "should work".
 
 ### Pull request form
 
-Copy this into your PR description:
+Fill out this form in your PR description, using your own game's info.
+This is just an example:
 
 ```
 Game: God of War
