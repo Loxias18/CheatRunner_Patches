@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12398</ID>
+    </TitleID>
+    <Metadata Title="The Forest"
+              Name="60 FPS"
+              Note="Enable at game boot."
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.15"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0111f84c" Value="31c0ffc0"/>
+        </PatchList>
+    </Metadata>
+</Patch>
