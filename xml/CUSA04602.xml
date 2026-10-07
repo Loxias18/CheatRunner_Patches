@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA04602</ID>
+    </TitleID>
+    <Metadata Title="Batman: Arkham Asylum"
+              Name="60 FPS Unlock"
+              Author="LHSDR"
+              PatchVer="1.3"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x04cb0000" Value="57565251415041514883ec088bbb0001000031f6e807690fff4883c40841594158595a5e5fe91611ddfe"/>
+            <Line Type="bytes" Address="0x0077c06a" Value="e8913f5304"/>
+        </PatchList>
+    </Metadata>
+</Patch>
