@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00021</ID>
+    </TitleID>
+    <Metadata Title="Watch Dogs"
+              Name="60 FPS"
+              Note="Enable at game boot."
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x1e3669b" Value="00"/>
+            <Line Type="bytes" Address="0x1e39028" Value="00"/>
+        </PatchList>
+    </Metadata>
+</Patch>
