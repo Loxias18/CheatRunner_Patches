@@ -83,6 +83,7 @@ No guesses, no "should work".
 2. **Filling out the form below is mandatory** in your pull request description.
 3. **When editing an existing patch, never remove or overwrite the author credits, and never change their order** (order of arrival).
    Example: `maj0r & Player1 & Player2`. Add yourself at the end.
+4. **When adding or editing a game's Title ID file, don't add yourself as an author unless you contributed at least one patch to that file.**
 
 ### Pull request form
 
@@ -106,6 +107,7 @@ Tested on PS5? Yes
 - [ ] The file is named after the Title ID
 - [ ] `AppVer` matches the game update you tested on
 - [ ] Existing authors are kept, in the same order
+- [ ] I only added myself as an author if I contributed a patch to the file
 - [ ] I tested it with CheatRunner and it works
 - [ ] The PR form is filled out
 
