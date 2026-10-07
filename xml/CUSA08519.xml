@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03041</ID>
+        <ID>CUSA08519</ID>
+        <ID>CUSA08568</ID>
+    </TitleID>
+    <Metadata Title="Red Dead Redemption 2"
+              Name="60 FPS"
+              Note="Enable at game boot. (Enable only one FPS patch)"
+              Author="maj0r"
+              PatchVer="1.1"
+              AppVer="01.32"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask_jump32"
+                  Address="8b b3 ?? ?? ?? ?? 44 8b 83 ?? ?? ?? ?? 8b 05 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 81 c3 ?? ?? ?? ?? ba 01 00 00 00"
+                  Offset="19"
+                  Size="6"
+                  Target="44 8b 05 ?? ?? ?? ?? 44 8b 0d ?? ?? ?? ?? 48 8d 9d 80 fe ff ff be 00 22 00 80 31 d2 31 c9 48 89 df 44 89 04 24"
+                  Value="50 51 52 56 57 41 50 41 51 41 52 41 53 48 83 ec 08 48 b8 f0 09 5c 09 00 00 00 00 8b 38 31 f6 48 b8 60 dd f5 06 00 00 00 00 ff d0 48 83 c4 08 41 5b 41 5a 41 59 41 58 5f 5e 5a 48 83 c4 08 58 48 b9 90 2d 5c 09 00 00 00 00 8b 09"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Red Dead Redemption 2"
+              Name="Uncap FPS (VSync Off)"
+              Note="Enable at game boot. (Enable only one FPS patch) - May cause tearing."
+              Author="maj0r"
+              PatchVer="1.1"
+              AppVer="01.32"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask_jump32"
+                  Address="8b b3 ?? ?? ?? ?? 44 8b 83 ?? ?? ?? ?? 8b 05 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 48 81 c3 ?? ?? ?? ?? ba 01 00 00 00"
+                  Offset="19"
+                  Size="6"
+                  Target="44 8b 05 ?? ?? ?? ?? 44 8b 0d ?? ?? ?? ?? 48 8d 9d 80 fe ff ff be 00 22 00 80 31 d2 31 c9 48 89 df 44 89 04 24"
+                  Value="50 51 52 56 57 41 50 41 51 41 52 41 53 48 83 ec 08 48 b8 f0 09 5c 09 00 00 00 00 8b 38 31 f6 48 b8 60 dd f5 06 00 00 00 00 ff d0 48 83 c4 08 41 5b 41 5a 41 59 41 58 5f 5e 5a 59 58 b9 02 00 00 00"/>
+        </PatchList>
+    </Metadata>
+</Patch>
