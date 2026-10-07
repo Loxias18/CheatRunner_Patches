@@ -8,8 +8,9 @@ Drop the patch file for your game in, launch it, and enjoy: 60 FPS, resolution u
 
 ## 📥 Getting CheatRunner
 
-These patches are made to work with **CheatRunner**. You can download it here:
+These patches are made to work with **CheatRunner**.
 
+You can download it here:
 👉 **https://github.com/notmaj0r/CheatRunner**
 
 ---
