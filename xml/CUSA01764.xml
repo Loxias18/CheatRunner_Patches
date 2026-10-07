@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01764</ID>
+    </TitleID>
+    <Metadata Title="Batman: Arkham Knight"
+              Name="60 FPS Unlock"
+              Author="LHSDR"
+              PatchVer="1.0"
+              AppVer="01.18"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x009fa57e" Value="be00000000"/>
+            <Line Type="bytes" Address="0x009fb766" Value="41bc04000000"/>
+            <Line Type="bytes" Address="0x009fb9e1" Value="0f85a9000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
