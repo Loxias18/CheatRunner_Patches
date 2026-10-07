@@ -2,7 +2,7 @@
 
 A community collection of **PS4 & PS5 game patches** made for [CheatRunner](https://github.com/notmaj0r/CheatRunner).
 
-Drop the patch file for your game in, launch it, and enjoy: 60 FPS, resolution unlocks, and more.
+Drop the patch file for your game in, launch it, and enjoy: 60 FPS, resolution patches, and more.
 
 ---
 
