@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA15436</ID>
+    </TitleID>
+    <Metadata Title="Kingdom Come: Deliverance Royal Edition"
+              Name="60 FPS"
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03ce0673" Value="31f69090909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
