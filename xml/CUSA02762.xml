@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02762</ID>
+    </TitleID>
+    <Metadata Title="Divinity: Original Sin Enhanced Edition"
+              Note="Enable at game boot."
+              Name="60 FPS"
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00b5fd15" Value="00000000" />
+        </PatchList>
+    </Metadata>
+</Patch>
