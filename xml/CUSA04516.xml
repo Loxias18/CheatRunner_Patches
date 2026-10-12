@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA04516</ID>
+    </TitleID>
+    <Metadata Title="Batman: Return to Arkham - Arkham City"
+              Name="60 FPS"
+			  Note="Enable at game boot."
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0077b9a7" Value="be00000000" />
+            <Line Type="bytes" Address="0x01904adb" Value="05" />
+            <Line Type="bytes" Address="0x01904ae8" Value="00007042" />
+        </PatchList>
+    </Metadata>
+</Patch>
