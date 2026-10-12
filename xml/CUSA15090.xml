@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA15090</ID>
+    </TitleID>
+    <Metadata Title="Need for Speed Heat"
+              Name="60 FPS"
+              Note="Enable at game boot."
+              Author="maj0r"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x004075c8" Value="c70300000000" />
+            <Line Type="bytes" Address="0x0415b0b0" Value="31c0c3" />
+            <Line Type="bytes" Address="0x43e4e72" Value="36" />
+            <Line Type="bytes" Address="0x43e4e9e" Value="36" />
+            <Line Type="bytes" Address="0x43e4ee5" Value="36" />
+            <Line Type="bytes" Address="0x43e4f09" Value="302e3031363636363636363636363636363766" />
+        </PatchList>
+    </Metadata>
+</Patch>
