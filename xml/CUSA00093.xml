@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00003</ID>
+        <ID>CUSA00064</ID>
+        <ID>CUSA00066</ID>
+        <ID>CUSA00093</ID>
+        <ID>CUSA00879</ID>
+    </TitleID>
+    <Metadata Title="Driveclub"
+              Name="1440p BALANCED + shadow fixes"
+              Note="1440p internal (RENDERING 776, WORLD 1746, GUI_STATIC 206, VEHICLES 432, GUI_DYNAMIC 62, CHARACTERS 34), tunnel lighting fix, shadow cascades 18m/70m, shadow cull 0.005."
+              Author="Kravickas &amp; miikearthur"
+              PatchVer="2.0"
+              AppVer="01.28"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01657f00" Value="4883ec08e8270b31ff4883c408483d000080207506b800008030c3483d0000a0737506b80000206dc3483d0000e0107506b80000e00cc3483d0000001e7506b80000001bc3483d000060057506b80000e003c3483d000020037506b800002002c3c3"/>
+            <Line Type="bytes" Address="0x01657fa0" Value="0f2e0525000000750af30f10051f000000eb110f2e051a0000007508f30f100514000000f3410f1144dd70c300003041000090410000284200008c42"/>
+            <Line Type="bytes" Address="0x01657fe0" Value="f30f5d0518000000f3430f11443738c3f30f5d0508000000f30f114338c366900ad7a33b"/>
+            <Line Type="bytes" Address="0x016d0544" Value="000a0000"/>
+            <Line Type="bytes" Address="0x016d0554" Value="a0050000"/>
+            <Line Type="bytes" Address="0x01643a10" Value="000a0000a0050000"/>
+            <Line Type="bytes" Address="0x00968a20" Value="e9dbf4ce00"/>
+            <Line Type="bytes" Address="0x00a113b7" Value="e8e46bc4006690"/>
+            <Line Type="bytes" Address="0x00a117e2" Value="e8f967c4006690"/>
+            <Line Type="bytes" Address="0x00a11977" Value="e87466c400"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Driveclub"
+              Name="60 FPS with deltatime (works on unpatched eboot)"
+              Note="illusion/Charlie_Muggins deltatime patch plus runtime hooks: forces 60 Hz flip every frame and 1/60 frame step, so it works even when CheatRunner applies after boot."
+              Author="illusion &amp; u/Charlie_Muggins &amp; miikearthur"
+              PatchVer="3.0"
+              AppVer="01.28"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01658010" Value="c783440100000000803fbe01000000c3"/>
+            <Line Type="bytes" Address="0x011847d0" Value="c5fa1005d8df5d00c3"/>
+            <Line Type="bytes" Address="0x01184800" Value="b801000000"/>
+            <Line Type="bytes" Address="0x01184725" Value="48b001"/>
+            <Line Type="bytes" Address="0x00a6306e" Value="9090"/>
+            <Line Type="bytes" Address="0x00b5f92b" Value="e8e086af000f1f4000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Driveclub"
+              Name="Disable motion blur and depth of field"
+              Note="Optional. Same shader handles both."
+              Author="Kravickas"
+              PatchVer="1.0"
+              AppVer="01.28"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a109f3" Value="31c090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
