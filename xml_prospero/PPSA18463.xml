@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA18463</ID>
+    </TitleID>
+    <!--
+      Japanese edition. The game reads userDefinedParam1 (3 on this edition) through
+      sceAppContentAppParamGetInt(1); every Japanese-edition check is built on that value.
+      When it matches, nudity and explicit-scene defaults are off and Options hides those toggles.
+      After enabling, turn both settings on in Options.
+    -->
+    <!-- 01.000.000: the helper that maps the value (module offset 0x51a9a40) treats 3 as non-Japanese. -->
+    <Metadata Title="Baldur's Gate 3"
+              Name="Disable Japanese content restrictions"
+              Note="Enable at game boot (autoload). Then turn nudity and explicit scenes on in Options."
+              Author="cevenkadir"
+              PatchVer="1.0"
+              AppVer="01.000.000"
+              AppElf="eboot.bin"
+              ImageBase="0x400000">
+        <PatchList>
+            <!-- module offset 0x51a9a73: cmp eax,3 -> cmp eax,2 -->
+            <Line Type="bytes" Address="0x055a9a73" Value="83f802"/>
+        </PatchList>
+    </Metadata>
+    <!--
+      01.800.700: the check is inlined at about 45 sites, so the import itself is hooked.
+      For param 1 the hook returns an error (key missing); other params go to the real function.
+    -->
+    <Metadata Title="Baldur's Gate 3"
+              Name="Disable Japanese content restrictions"
+              Note="Enable at game boot (autoload). Then turn nudity and explicit scenes on in Options."
+              Author="cevenkadir"
+              PatchVer="1.0"
+              AppVer="01.800.700"
+              AppElf="eboot.bin"
+              ImageBase="0x400000">
+        <PatchList>
+            <!-- module offset 0x9e2b50: int3 padding -> cmp edi,1 / je / jmp [GOT 0x8889250] / mov eax,0x80d90002 / ret -->
+            <Line Type="bytes" Address="0x00de2b50" Value="83ff017406ff25f566ea07b80200d980c3"/>
+            <!-- module offset 0x6e268d0: sceAppContentAppParamGetInt stub, ff257a29a601 (jmp [GOT]) -> jmp 0x9e2b50 -->
+            <Line Type="bytes" Address="0x072268d0" Value="e97bc2bbf990"/>
+        </PatchList>
+    </Metadata>
+</Patch>
